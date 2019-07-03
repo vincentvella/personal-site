@@ -9,12 +9,18 @@ import MailIcon from '@material-ui/icons/Mail';
 import { useTheme } from '@material-ui/core/styles';
 import useStyles from './drawer.styles';
 
-const Drawer = () => {
+interface DrawerProps {
+  paddingTop?: boolean;
+}
+
+const Drawer: React.FC<DrawerProps> = props => {
+  const { paddingTop } = props;
   const theme = useTheme();
   const classes = useStyles(theme);
+  const toolbarStyles = paddingTop ? { className: classes.toolbar } : {};
   return (
     <div>
-      <div className={classes.toolbar} />
+      <div {...toolbarStyles} />
       <Divider />
       <List>
         {['About', 'Skills', 'Press', 'Resume', 'Contact'].map((text, index) => (

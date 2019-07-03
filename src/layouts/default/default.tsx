@@ -9,7 +9,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { useTheme } from '@material-ui/core/styles';
 import useStyles from './default.styles';
-import CustomDrawer from './drawer';
+import CustomDrawer from '../../components/drawer';
 import { Link } from 'gatsby';
 
 const logo = require('../../../data/assets/logo/bottom-right-sloth.svg');
@@ -25,9 +25,9 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = (props: DefaultLayoutProps) 
   const classes = useStyles(theme);
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  function handleDrawerToggle() {
+  const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
-  }
+  };
 
   return (
     <div className={classes.root}>
@@ -67,7 +67,7 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = (props: DefaultLayoutProps) 
         </Hidden>
         <Hidden xsDown implementation="css">
           <Drawer classes={{ paper: classes.drawerPaper }} variant="permanent" open>
-            <CustomDrawer />
+            <CustomDrawer paddingTop />
           </Drawer>
         </Hidden>
       </nav>
