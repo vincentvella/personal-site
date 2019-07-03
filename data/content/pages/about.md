@@ -1,6 +1,8 @@
 ---
-title: 'Vincent Vella'
+title: 'About'
 subtitle: 'Howdy'
 path: '/about'
-body: 'Hey all this is me'
+body: 'Learn a bit about who I am'
+coverImage: '../../assets/areas/about/about-me.jpg'
+type: 'content'
 ---
