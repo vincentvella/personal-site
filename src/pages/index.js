@@ -65,7 +65,7 @@ export const pageQuery = graphql`
             type
             coverImage {
               childImageSharp {
-                fluid(maxWidth: 1280, quality: 100) {
+                fluid(maxHeight: 150, maxWidth: 250, quality: 100) {
                   ...GatsbyImageSharpFluid_noBase64
                 }
               }

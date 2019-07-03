@@ -12,7 +12,7 @@ const AttributeListing = ({ node }) => {
     <Card raised key={id}>
       <CardContent>
         <Img fluid={image} />
-        <Typography variant="h5">{frontmatter.title}</Typography>
+        <Typography variant="h6">{frontmatter.title}</Typography>
       </CardContent>
     </Card>
   );
