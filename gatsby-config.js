@@ -8,6 +8,8 @@ module.exports = {
     github: '@vincentvella'
   },
   plugins: [
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-top-layout',
     {
       resolve: 'gatsby-plugin-material-ui'
