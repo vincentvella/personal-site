@@ -7,6 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import { useTheme } from '@material-ui/core/styles';
 import useStyles from './drawer.styles';
 import AppIcon from '../app-icon';
+import { Link } from 'gatsby';
 
 interface DrawerProps {
   paddingTop?: boolean;
@@ -14,14 +15,16 @@ interface DrawerProps {
 }
 
 const createDrawerItem = ({ node: { frontmatter } }) => {
-  const { title } = frontmatter;
+  const { title, path } = frontmatter;
   return (
-    <ListItem button key={title}>
-      <ListItemIcon>
-        <AppIcon icon={title} />
-      </ListItemIcon>
-      <ListItemText primary={title} />
-    </ListItem>
+    <Link to={path} style={{ textDecoration: 'none', color: 'black' }}>
+      <ListItem button key={title}>
+        <ListItemIcon>
+          <AppIcon icon={title} />
+        </ListItemIcon>
+        <ListItemText primary={title} />
+      </ListItem>
+    </Link>
   );
 };
 

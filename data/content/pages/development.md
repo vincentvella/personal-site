@@ -1,7 +1,7 @@
 ---
 title: 'Development'
 subtitle: 'Howdy'
-path: '/about'
+path: '/development'
 body: 'Hey all this is me'
 coverImage: '../../assets/areas/development/pacalendar.jpg'
 type: 'content'

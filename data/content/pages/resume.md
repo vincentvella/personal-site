@@ -1,7 +1,7 @@
 ---
 title: 'Resume'
 subtitle: 'Howdy'
-path: '/about'
+path: '/resume'
 body: 'Hey all this is me'
 coverImage: '../../assets/areas/resume/resume.jpg'
 type: 'content'

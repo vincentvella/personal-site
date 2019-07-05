@@ -1,7 +1,7 @@
 ---
 title: 'Contact'
 subtitle: 'Howdy'
-path: '/about'
+path: '/contact'
 body: 'Just checking'
 coverImage: '../../assets/areas/contact/iPhone.jpg'
 type: 'content'
