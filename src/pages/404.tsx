@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 
 const logo = require('../../data/assets/logo/bottom-right-sloth.svg');
 
-const Page = () => (
+const Page: React.FC = () => (
   <DefaultLayout>
     <Paper style={{ textAlign: 'center' }}>
       <Typography>

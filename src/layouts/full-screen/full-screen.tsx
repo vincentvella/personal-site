@@ -15,13 +15,12 @@ import { Link } from 'gatsby';
 const logo = require('../../../data/assets/logo/bottom-right-sloth.svg');
 
 interface DefaultLayoutProps {
-  container: Element;
-  children: Element;
+  children: React.ReactNode;
   drawerProps: any;
 }
 
 const DefaultLayout: React.FC<DefaultLayoutProps> = (props: DefaultLayoutProps) => {
-  const { container, children, drawerProps } = props;
+  const { children, drawerProps } = props;
   const theme = useTheme();
   const classes = useStyles(theme);
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -55,7 +54,6 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = (props: DefaultLayoutProps) 
       <nav aria-label="Mailbox folders">
         <Hidden smUp implementation="css">
           <Drawer
-            container={container}
             variant="temporary"
             anchor={theme.direction === 'rtl' ? 'right' : 'left'}
             open={mobileOpen}

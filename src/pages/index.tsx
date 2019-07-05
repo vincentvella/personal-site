@@ -6,7 +6,11 @@ import { FullScreenLayout } from '../layouts';
 import useStyles from '../styles/index.styles';
 import AttributeListing from '../components/attribute-listing';
 
-const App = props => {
+interface RootProps {
+  data: any;
+}
+
+const App: React.FC<RootProps> = props => {
   const theme = useTheme();
   const classes = useStyles(theme);
   const { title, subtitle, body } = get(props, 'data.markdownRemark.frontmatter', {
@@ -64,7 +68,7 @@ export const pageQuery = graphql`
             type
             coverImage {
               childImageSharp {
-                fluid(maxHeight: 150, maxWidth: 250, quality: 100) {
+                fluid(maxHeight: 200, maxWidth: 250, quality: 100) {
                   ...GatsbyImageSharpFluid_noBase64
                 }
               }
