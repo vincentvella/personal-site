@@ -15,9 +15,8 @@ const App = props => {
     body: ''
   });
   const contentScreens = get(props, 'data.allMarkdownRemark.edges', []);
-  console.log(props);
   return (
-    <FullScreenLayout>
+    <FullScreenLayout drawerProps={contentScreens}>
       <Container maxWidth={false} className={classes.header}>
         <Typography variant="h2">{title}</Typography>
         <Divider />

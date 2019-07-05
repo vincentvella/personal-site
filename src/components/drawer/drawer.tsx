@@ -4,17 +4,29 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import { useTheme } from '@material-ui/core/styles';
 import useStyles from './drawer.styles';
+import AppIcon from '../app-icon';
 
 interface DrawerProps {
   paddingTop?: boolean;
+  drawerProps: any;
 }
 
+const createDrawerItem = ({ node: { frontmatter } }) => {
+  const { title } = frontmatter;
+  return (
+    <ListItem button key={title}>
+      <ListItemIcon>
+        <AppIcon icon={title} />
+      </ListItemIcon>
+      <ListItemText primary={title} />
+    </ListItem>
+  );
+};
+
 const Drawer: React.FC<DrawerProps> = props => {
-  const { paddingTop } = props;
+  const { paddingTop, drawerProps } = props;
   const theme = useTheme();
   const classes = useStyles(theme);
   const toolbarStyles = paddingTop ? { className: classes.toolbar } : {};
@@ -22,14 +34,7 @@ const Drawer: React.FC<DrawerProps> = props => {
     <div>
       <div {...toolbarStyles} />
       <Divider />
-      <List>
-        {['About', 'Skills', 'Press', 'Resume', 'Contact'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      <List>{drawerProps.map(createDrawerItem)}</List>
     </div>
   );
 };
