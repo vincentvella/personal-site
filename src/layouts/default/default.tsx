@@ -16,10 +16,11 @@ const logo = require('../../../data/assets/logo/bottom-right-sloth.svg');
 
 interface DefaultLayoutProps {
   children: React.ReactNode;
+  drawerProps: any;
 }
 
 const DefaultLayout: React.FC<DefaultLayoutProps> = (props: DefaultLayoutProps) => {
-  const { children } = props;
+  const { children, drawerProps } = props;
   const theme = useTheme();
   const classes = useStyles(theme);
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -60,12 +61,12 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = (props: DefaultLayoutProps) 
             classes={{ paper: classes.drawerPaper }}
             ModalProps={{ keepMounted: true }}
           >
-            <CustomDrawer />
+            <CustomDrawer drawerProps={drawerProps} />
           </Drawer>
         </Hidden>
         <Hidden xsDown implementation="css">
           <Drawer classes={{ paper: classes.drawerPaper }} variant="permanent" open>
-            <CustomDrawer paddingTop />
+            <CustomDrawer drawerProps={drawerProps} paddingTop />
           </Drawer>
         </Hidden>
       </nav>
