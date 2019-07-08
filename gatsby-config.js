@@ -11,6 +11,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-top-layout',
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-plugin-material-ui'
     },

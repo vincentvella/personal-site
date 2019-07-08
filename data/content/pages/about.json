@@ -1,0 +1,25 @@
+{
+  "title": "About",
+  "subtitle": "Howdy",
+  "path": "/about",
+  "body": "Learn a bit about who I am",
+  "coverImage": "../../assets/areas/about/about-me.jpg",
+  "type": "content",
+  "contentAreas": [
+    {
+      "title": "Education",
+      "message": "I was welcomed into the College of Information Sciences and Technology in the fall of 2015 where I followed the curriculum the Systems Design and Development option. The curriculum of the Systems Design and Development option was centered around the creation of complex systems and applications across desktop, mobile, and web platforms.",
+      "coverPhoto": "../../assets/areas/about/old_main.jpg"
+    },
+    {
+      "title": "Education",
+      "message": "I was welcomed into the College of Information Sciences and Technology in the fall of 2015 where I followed the curriculum the Systems Design and Development option. The curriculum of the Systems Design and Development option was centered around the creation of complex systems and applications across desktop, mobile, and web platforms.",
+      "coverPhoto": "../../assets/areas/about/old_main.jpg"
+    },
+    {
+      "title": "Education",
+      "message": "I was welcomed into the College of Information Sciences and Technology in the fall of 2015 where I followed the curriculum the Systems Design and Development option. The curriculum of the Systems Design and Development option was centered around the creation of complex systems and applications across desktop, mobile, and web platforms.",
+      "coverPhoto": "../../assets/areas/about/old_main.jpg"
+    }
+  ]
+}
