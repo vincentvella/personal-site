@@ -68,7 +68,7 @@ export const pageQuery = graphql`
         body
       }
     }
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "content" } } }) {
+    allMarkdownRemark(filter: { frontmatter: { type: { eq: "content" } } }, sort: { fields: frontmatter___title }) {
       edges {
         node {
           id
