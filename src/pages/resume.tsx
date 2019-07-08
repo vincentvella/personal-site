@@ -31,7 +31,7 @@ class Resume extends React.Component {
   }
 
   updateWidth() {
-    const width = this.documentGrid.current.clientWidth <= 1280 ? this.documentGrid.current.clientWidth - 20 : 1260;
+    const width = this.documentGrid.current.clientWidth <= 1280 ? this.documentGrid.current.clientWidth - 25 : 1260;
     this.setState({ width });
   }
 

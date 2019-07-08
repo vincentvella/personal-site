@@ -29,7 +29,7 @@ const App: React.FC<RootProps> = props => {
       <Container style={{ padding: theme.spacing(3) }}>
         <Typography paragraph>{body}</Typography>
       </Container>
-      <Grid container spacing={2} style={{ padding: theme.spacing(2) }}>
+      <Grid container spacing={0} style={{ padding: theme.spacing(2) }}>
         <Grid item xs={12}>
           <Grid container justify="center" spacing={2}>
             {contentScreens.map(screen => (
