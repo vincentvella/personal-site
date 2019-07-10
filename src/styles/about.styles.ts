@@ -8,7 +8,7 @@ export default makeStyles((theme: Theme) =>
     header: {
       textAlign: 'center',
       backgroundColor: 'lightGrey',
-      marginBottom: -40,
+      marginBottom: -50,
       padding: 0
     }
   })

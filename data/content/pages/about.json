@@ -12,7 +12,17 @@
       "coverPhoto": "../../assets/areas/about/old_main.jpg"
     },
     {
-      "title": "Education",
+      "title": "Work",
+      "message": "I was first hired by Holman's fleet management branch - Automotive Resources International (ARI) as an intern in the summer of 2017. While working that summer I came up with a potential product idea, drew up a scope of work and pitched the idea to the head of product development. I was granted permission to carry out the project throughout the term of my Junior year at Penn State and upon completion of the project was welcomed back into the internship program as a member of the newest branch of the company \"Holman Strategic Ventures\" during the summer of 2018. From there I worked as an intern and then part-time employee for about a year until I was welcomed as a full-time Software Engineer beginning in the Summer of 2019. I continue to work as a Full-Stack Web and Mobile engineer for Holman Strategic Ventures.",
+      "coverPhoto": "../../assets/areas/about/holman_logo.jpeg"
+    },
+    {
+      "title": "Entrepreneurship",
+      "message": "I was welcomed into the College of Information Sciences and Technology in the fall of 2015 where I followed the curriculum the Systems Design and Development option. The curriculum of the Systems Design and Development option was centered around the creation of complex systems and applications across desktop, mobile, and web platforms.",
+      "coverPhoto": "../../assets/areas/about/old_main.jpg"
+    },
+    {
+      "title": "Special Interests",
       "message": "I was welcomed into the College of Information Sciences and Technology in the fall of 2015 where I followed the curriculum the Systems Design and Development option. The curriculum of the Systems Design and Development option was centered around the creation of complex systems and applications across desktop, mobile, and web platforms.",
       "coverPhoto": "../../assets/areas/about/old_main.jpg"
     },
