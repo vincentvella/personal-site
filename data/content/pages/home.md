@@ -1,7 +1,0 @@
----
-title: 'Vincent Vella'
-subtitle: 'Web & Mobile Full-Stack Engineer'
-path: '/'
-body: "I believe that at it's core programming is fundamentally a creative activity. In the same way that a writer uses english and grammar to create books - programmers use their various programming languages and tools. As a growing web and mobile developer I intend to use this site as a way to showcase my creations and experience as well as assisting with the creative process of others throughout the field. Feel free to visit any of the links below to find out more about my background in the industry!"
-type: 'index'
----

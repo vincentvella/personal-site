@@ -14,8 +14,8 @@ interface DrawerProps {
   drawerProps: any;
 }
 
-const createDrawerItem = ({ node: { frontmatter } }) => {
-  const { title, path } = frontmatter;
+const createDrawerItem = ({ node }) => {
+  const { title, path } = node;
   return (
     <Link to={path} style={{ textDecoration: 'none', color: 'black' }}>
       <ListItem button key={title}>

@@ -37,7 +37,7 @@ class Resume extends React.Component {
 
   render() {
     const { width } = this.state;
-    const contentScreens = get(this.props, 'data.allMarkdownRemark.edges', []);
+    const contentScreens = get(this.props, 'data.allPagesJson.edges', []);
     return (
       <div ref={this.documentGrid}>
         <DefaultLayout drawerProps={contentScreens}>
@@ -60,25 +60,23 @@ export const pageQuery = graphql`
       id
       publicURL
     }
-    markdownRemark(frontmatter: { path: { eq: "/resume" } }) {
-      frontmatter {
-        title
-        subtitle
-        path
-        body
-      }
+    pagesJson(path: { eq: "/resume" }) {
+      id
+      body
+      path
+      subtitle
+      title
+      type
     }
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "content" } } }, sort: { fields: frontmatter___title }) {
+    allPagesJson(filter: { type: { eq: "content" } }, sort: { fields: title }) {
       edges {
         node {
           id
-          frontmatter {
-            body
-            path
-            subtitle
-            title
-            type
-          }
+          body
+          path
+          subtitle
+          title
+          type
         }
       }
     }

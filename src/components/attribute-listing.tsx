@@ -4,11 +4,7 @@ import Img from 'gatsby-image';
 import { Card, CardContent, Typography, Button, CardActions } from '@material-ui/core';
 import { Link } from 'gatsby';
 
-const AttributeListing = ({ node }) => {
-  const {
-    id,
-    frontmatter: { title, coverImage, path }
-  } = node;
+const AttributeListing = ({ node: { id, title, coverImage, path } }) => {
   const image = get(coverImage, 'childImageSharp.fluid', null);
   return (
     <Card raised key={id}>

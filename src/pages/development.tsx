@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import { DefaultLayout } from '../layouts';
 
 const Development = props => {
-  const contentScreens = get(props, 'data.allMarkdownRemark.edges', []);
+  const contentScreens = get(props, 'data.allPagesJson.edges', []);
   return (
     <DefaultLayout drawerProps={contentScreens}>
       <div>Development</div>
@@ -16,25 +16,23 @@ export default Development;
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(frontmatter: { path: { eq: "/development" } }) {
-      frontmatter {
-        title
-        subtitle
-        path
-        body
-      }
+    pagesJson(path: { eq: "/development" }) {
+      id
+      body
+      path
+      subtitle
+      title
+      type
     }
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "content" } } }, sort: { fields: frontmatter___title }) {
+    allPagesJson(filter: { type: { eq: "content" } }, sort: { fields: title }) {
       edges {
         node {
           id
-          frontmatter {
-            body
-            path
-            subtitle
-            title
-            type
-          }
+          body
+          path
+          subtitle
+          title
+          type
         }
       }
     }

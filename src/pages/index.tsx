@@ -13,12 +13,12 @@ interface RootProps {
 const App: React.FC<RootProps> = props => {
   const theme = useTheme();
   const classes = useStyles(theme);
-  const { title, subtitle, body } = get(props, 'data.markdownRemark.frontmatter', {
+  const { title, subtitle, body } = get(props, 'data.pagesJson', {
     title: '',
     subtitle: '',
     body: ''
   });
-  const contentScreens = get(props, 'data.allMarkdownRemark.edges', []);
+  const contentScreens = get(props, 'data.allPagesJson.edges', []);
   return (
     <FullScreenLayout drawerProps={contentScreens}>
       <Container maxWidth={false} className={classes.header}>
@@ -48,32 +48,30 @@ export default App;
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(frontmatter: { path: { eq: "/" } }) {
-      frontmatter {
-        title
-        subtitle
-        path
-        body
-      }
+    pagesJson(path: { eq: "/" }) {
+      id
+      body
+      path
+      subtitle
+      title
+      type
     }
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "content" } } }, sort: { fields: frontmatter___title }) {
+    allPagesJson(filter: { type: { eq: "content" } }, sort: { fields: title }) {
       edges {
         node {
           id
-          frontmatter {
-            body
-            path
-            subtitle
-            title
-            type
-            coverImage {
-              childImageSharp {
-                fluid(maxHeight: 200, maxWidth: 250, quality: 100) {
-                  ...GatsbyImageSharpFluid_noBase64
-                }
+          body
+          path
+          subtitle
+          title
+          type
+          coverImage {
+            childImageSharp {
+              fluid(maxHeight: 200, maxWidth: 250, quality: 100) {
+                ...GatsbyImageSharpFluid_noBase64
               }
-              publicURL
             }
+            publicURL
           }
         }
       }
