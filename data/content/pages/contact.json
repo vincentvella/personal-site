@@ -4,5 +4,42 @@
   "path": "/contact",
   "body": "Just checking",
   "coverImage": "../../assets/areas/contact/iPhone.jpg",
-  "type": "content"
+  "type": "content",
+  "contactSources": [
+    {
+      "title": "Vince Vella",
+      "icon": "facebook",
+      "iconSet": "fab",
+      "badgeColor": "#3b5998",
+      "link": "https://www.facebook.com/vincejvella"
+    },
+    {
+      "title": "Vince Vella",
+      "icon": "instagram",
+      "iconSet": "fab",
+      "badgeColor": "#E1306C",
+      "link": "https://www.instagram.com/vince.vella/"
+    },
+    {
+      "title": "Vincent Vella",
+      "icon": "linkedin",
+      "iconSet": "fab",
+      "badgeColor": "#0077B5",
+      "link": "https://www.linkedin.com/in/vincent-vella/"
+    },
+    {
+      "title": "vincentvella",
+      "icon": "github",
+      "iconSet": "fab",
+      "badgeColor": "#000000",
+      "link": "https://github.com/vincentvella"
+    },
+    {
+      "title": "coding_all_day",
+      "icon": "twitter",
+      "iconSet": "fab",
+      "badgeColor": "#1dcaff",
+      "link": "https://twitter.com/coding_all_day"
+    }
+  ]
 }
