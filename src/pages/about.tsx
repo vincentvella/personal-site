@@ -4,7 +4,14 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { DefaultLayout } from '../layouts';
 import useStyles from '../styles/about.styles';
-import { Container, Typography, useTheme, Divider, Card, CardContent, Grid } from '@material-ui/core';
+import {
+  Container,
+  Typography,
+  useTheme,
+  Card,
+  CardContent,
+  Grid
+} from '@material-ui/core';
 
 const About = props => {
   const theme = useTheme();
@@ -19,34 +26,39 @@ const About = props => {
   const contentScreens = get(props, 'data.allPagesJson.edges', []);
   return (
     <DefaultLayout drawerProps={contentScreens}>
-      {contentAreas.map(area => {
-        console.log(area);
-        const { coverPhoto, title, message } = area;
-        const image = get(coverPhoto, 'childImageSharp.fluid', null);
-        return (
-          <>
-            <Container maxWidth={false} className={classes.header}>
-              <Img fluid={image} style={{ zIndex: 0 }} />
-            </Container>
-            <Grid container spacing={0} style={{ padding: theme.spacing(2) }}>
-              <Grid item xs={12}>
-                <Grid container justify="flex-start" spacing={2}>
-                  <Card style={{ zIndex: 1 }}>
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        {title}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary" component="p">
-                        {message}
-                      </Typography>
-                    </CardContent>
-                  </Card>
+      <Container>
+        {contentAreas.map(area => {
+          const { coverPhoto, title, message } = area;
+          const image = get(coverPhoto, 'childImageSharp.fluid', null);
+          return (
+            <>
+              <Container maxWidth={false} className={classes.header}>
+                <Img fluid={image} style={{ zIndex: 0 }} />
+              </Container>
+              <Grid container spacing={0} style={{ padding: theme.spacing(2) }}>
+                <Grid item xs={12}>
+                  <Grid container justify="flex-start" spacing={2}>
+                    <Card style={{ zIndex: 1 }}>
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                          {title}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          color="textSecondary"
+                          component="p"
+                        >
+                          {message}
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
                 </Grid>
               </Grid>
-            </Grid>
-          </>
-        );
-      })}
+            </>
+          );
+        })}
+      </Container>
     </DefaultLayout>
   );
 };
