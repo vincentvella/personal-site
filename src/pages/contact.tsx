@@ -8,9 +8,12 @@ import {
   Grid,
   useTheme,
   Card,
-  Typography
+  Typography,
+  Divider
 } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SocialMediaChip from '../components/social-media-chip';
+import ContactForm from '../components/contact-form';
 
 const Contact = props => {
   const theme = useTheme();
@@ -30,41 +33,21 @@ const Contact = props => {
       <Container>
         <Grid container spacing={0} style={{ alignItems: 'center' }}>
           <Grid item xs={12}>
-            <Card style={{ zIndex: 1, padding: 10 }}>
+            <Card style={{ zIndex: 1, padding: 16 }}>
               <Typography variant="h5">Contact Me</Typography>
               <Typography variant="subtitle1" color="textSecondary">
-                Feel free to reach out to me on any of my social media accounts.
+                Feel free to connect with me on any of my social media accounts.
               </Typography>
               <Grid container alignItems="center" justify="center">
-                {contactSources.map(
-                  ({ title, icon, iconSet, badgeColor, link }) => {
-                    return (
-                      <a
-                        href={link}
-                        style={{
-                          textDecoration: 'none'
-                        }}
-                      >
-                        <Chip
-                          label={title}
-                          style={{
-                            backgroundColor: badgeColor,
-                            color: 'white',
-                            cursor: 'pointer',
-                            margin: 10
-                          }}
-                          icon={
-                            <FontAwesomeIcon
-                              icon={[iconSet, icon]}
-                              style={{ color: 'white' }}
-                            />
-                          }
-                        />
-                      </a>
-                    );
-                  }
-                )}
+                {contactSources.map(SocialMediaChip)}
               </Grid>
+              <Divider style={{ margin: 10 }} />
+              <Typography variant="subtitle1" color="textSecondary">
+                Already connected? Maybe you just have an exciting opportunity
+                or idea and would like to get a direct response! Feel free to
+                fill out the below form and I will reach out via email.
+              </Typography>
+              <ContactForm />
             </Card>
           </Grid>
         </Grid>
