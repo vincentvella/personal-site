@@ -11,8 +11,13 @@
       "developmentNodes": [
         {
           "title": "React Native",
-          "proficiencyLevel": 4,
+          "proficiencyLevel": 5,
           "image": "../../assets/areas/development/react.png"
+        },
+        {
+          "title": "Expo",
+          "proficiencyLevel": 4,
+          "image": "../../assets/areas/development/expo.png"
         },
         {
           "title": "Android",
@@ -40,20 +45,146 @@
           "image": "../../assets/areas/development/redux.png"
         },
         {
+          "title": "Gatsby",
+          "proficiencyLevel": 4,
+          "image": "../../assets/areas/development/gatsby.png"
+        },
+        {
           "title": "Typescript",
           "proficiencyLevel": 3,
           "image": "../../assets/areas/development/typescript.png"
+        },
+        {
+          "title": "Jest",
+          "proficiencyLevel": 3,
+          "image": "../../assets/areas/development/jest.png"
+        },
+        {
+          "title": "GraphQL",
+          "proficiencyLevel": 3,
+          "image": "../../assets/areas/development/graphql.png"
+        },
+        {
+          "title": "Figma",
+          "proficiencyLevel": 2,
+          "image": "../../assets/areas/development/figma.png"
         }
       ]
     },
     {
-      "title": "Back-End"
+      "title": "Back-End",
+      "developmentNodes": [
+        {
+          "title": "Node.js",
+          "proficiencyLevel": 3,
+          "image": "../../assets/areas/development/nodejs.png"
+        },
+        {
+          "title": "Express",
+          "proficiencyLevel": 3,
+          "image": "../../assets/areas/development/express.png"
+        },
+        {
+          "title": "Prisma",
+          "proficiencyLevel": 3,
+          "image": "../../assets/areas/development/prisma.png"
+        },
+        {
+          "title": "Java",
+          "proficiencyLevel": 2,
+          "image": "../../assets/areas/development/java.png"
+        },
+        {
+          "title": "Python",
+          "proficiencyLevel": 2,
+          "image": "../../assets/areas/development/python.png"
+        },
+        {
+          "title": "Ruby on Rails",
+          "proficiencyLevel": 1,
+          "image": "../../assets/areas/development/rails.png"
+        }
+      ]
     },
     {
-      "title": "Databases"
+      "title": "Databases",
+      "developmentNodes": [
+        {
+          "title": "Firebase",
+          "proficiencyLevel": 4,
+          "image": "../../assets/areas/development/firebase.png"
+        },
+        {
+          "title": "DynamoDB",
+          "proficiencyLevel": 3,
+          "image": "../../assets/areas/development/dynamo.png"
+        },
+        {
+          "title": "Amazon S3",
+          "proficiencyLevel": 3,
+          "image": "../../assets/areas/development/s3.png"
+        },
+        {
+          "title": "Firebase Cloud Functions",
+          "proficiencyLevel": 3,
+          "image": "../../assets/areas/development/firebase-cloud-functions.png"
+        },
+        {
+          "title": "MongoDB",
+          "proficiencyLevel": 2,
+          "image": "../../assets/areas/development/mongo.png"
+        },
+        {
+          "title": "Lambda",
+          "proficiencyLevel": 2,
+          "image": "../../assets/areas/development/lambda.png"
+        }
+      ]
     },
     {
-      "title": "DevOps"
+      "title": "DevOps",
+      "developmentNodes": [
+        {
+          "title": "NPM",
+          "proficiencyLevel": 5,
+          "image": "../../assets/areas/development/npm.png"
+        },
+        {
+          "title": "Visual Studio App Center",
+          "proficiencyLevel": 4,
+          "image": "../../assets/areas/development/appcenter.png"
+        },
+        {
+          "title": "Visual Studio Code",
+          "proficiencyLevel": 4,
+          "image": "../../assets/areas/development/vscode.png"
+        },
+        {
+          "title": "Heroku",
+          "proficiencyLevel": 4,
+          "image": "../../assets/areas/development/heroku.png"
+        },
+        {
+          "title": "Amazon ECS",
+          "proficiencyLevel": 4,
+          "image": "../../assets/areas/development/ecs.png"
+        },
+        {
+          "title": "Github",
+          "proficiencyLevel": 4,
+          "image": "../../assets/areas/development/github.png"
+        },
+        {
+          "title": "Docker",
+          "proficiencyLevel": 3,
+          "image": "../../assets/areas/development/docker.png"
+        },
+        {
+          "title": "Git",
+          "proficiencyLevel": 2,
+          "image": "../../assets/areas/development/git.png"
+        }
+      ]
     }
   ]
 }

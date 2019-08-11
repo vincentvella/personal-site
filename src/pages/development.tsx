@@ -2,7 +2,14 @@ import React from 'react';
 import get from 'lodash.get';
 import { graphql } from 'gatsby';
 import { DefaultLayout } from '../layouts';
-import { Container, Grid, Typography, Divider, Card } from '@material-ui/core';
+import {
+  Container,
+  Grid,
+  Typography,
+  Divider,
+  Card,
+  CardContent
+} from '@material-ui/core';
 import DevelopmentCard from '../components/development-card';
 
 const Development = props => {
@@ -16,6 +23,11 @@ const Development = props => {
   return (
     <DefaultLayout drawerProps={contentScreens}>
       <Container>
+        <Card style={{ marginTop: 10, marginBottom: 10 }}>
+          <CardContent>
+            <div>hey</div>
+          </CardContent>
+        </Card>
         <Card style={{ zIndex: 1, padding: 16 }}>
           <Grid container>
             {stacks.map(stack => {
@@ -25,10 +37,10 @@ const Development = props => {
                   <Typography variant="h6" color="textSecondary">
                     {title}
                   </Typography>
+                  <Divider />
                   <Grid container>
                     {(developmentNodes || []).map(DevelopmentCard)}
                   </Grid>
-                  <Divider />
                 </Grid>
               );
             })}
