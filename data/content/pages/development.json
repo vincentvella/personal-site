@@ -4,5 +4,56 @@
   "path": "/development",
   "body": "Hey all this is me",
   "coverImage": "../../assets/areas/development/pacalendar.jpg",
-  "type": "content"
+  "type": "content",
+  "stacks": [
+    {
+      "title": "Mobile",
+      "developmentNodes": [
+        {
+          "title": "React Native",
+          "proficiencyLevel": 4,
+          "image": "../../assets/areas/development/react.png"
+        },
+        {
+          "title": "Android",
+          "proficiencyLevel": 3,
+          "image": "../../assets/areas/development/android.png"
+        },
+        {
+          "title": "Objective C",
+          "proficiencyLevel": 3,
+          "image": "../../assets/areas/development/objective-c.png"
+        }
+      ]
+    },
+    {
+      "title": "Front-End",
+      "developmentNodes": [
+        {
+          "title": "React",
+          "proficiencyLevel": 4,
+          "image": "../../assets/areas/development/react.png"
+        },
+        {
+          "title": "Redux",
+          "proficiencyLevel": 4,
+          "image": "../../assets/areas/development/redux.png"
+        },
+        {
+          "title": "Typescript",
+          "proficiencyLevel": 3,
+          "image": "../../assets/areas/development/typescript.png"
+        }
+      ]
+    },
+    {
+      "title": "Back-End"
+    },
+    {
+      "title": "Databases"
+    },
+    {
+      "title": "DevOps"
+    }
+  ]
 }
