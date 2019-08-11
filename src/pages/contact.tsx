@@ -3,7 +3,6 @@ import get from 'lodash.get';
 import { graphql } from 'gatsby';
 import { DefaultLayout } from '../layouts';
 import {
-  Chip,
   Container,
   Grid,
   useTheme,
@@ -11,12 +10,10 @@ import {
   Typography,
   Divider
 } from '@material-ui/core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SocialMediaChip from '../components/social-media-chip';
 import ContactForm from '../components/contact-form';
 
 const Contact = props => {
-  const theme = useTheme();
   const { title, subtitle, body, contactSources } = get(
     props,
     'data.pagesJson',

@@ -19,7 +19,9 @@ interface DefaultLayoutProps {
   drawerProps: any;
 }
 
-const DefaultLayout: React.FC<DefaultLayoutProps> = (props: DefaultLayoutProps) => {
+const DefaultLayout: React.FC<DefaultLayoutProps> = (
+  props: DefaultLayoutProps
+) => {
   const { children, drawerProps } = props;
   const theme = useTheme();
   const classes = useStyles(theme);
@@ -64,8 +66,12 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = (props: DefaultLayoutProps) 
             <CustomDrawer drawerProps={drawerProps} />
           </Drawer>
         </Hidden>
-        <Hidden xsDown implementation="css">
-          <Drawer classes={{ paper: classes.drawerPaper }} variant="permanent" open>
+        <Hidden smDown implementation="css">
+          <Drawer
+            classes={{ paper: classes.drawerPaper }}
+            variant="permanent"
+            open
+          >
             <CustomDrawer drawerProps={drawerProps} paddingTop />
           </Drawer>
         </Hidden>

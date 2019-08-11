@@ -9,7 +9,7 @@ export default makeStyles((theme: Theme) =>
       display: 'flex'
     },
     drawer: {
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('md')]: {
         width: LayoutConstants.drawerWidth,
         flexShrink: 0
       }
@@ -22,7 +22,7 @@ export default makeStyles((theme: Theme) =>
     },
     menuButton: {
       marginRight: theme.spacing(2),
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('md')]: {
         display: 'none'
       }
     },
