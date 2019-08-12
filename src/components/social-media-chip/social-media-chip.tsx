@@ -8,7 +8,7 @@ const SocialMediaChip = ({ title, icon, iconSet, badgeColor, link }) => {
   const theme = useTheme();
   const classes = useStyles(theme);
   return (
-    <a href={link} className={classes.link}>
+    <a href={link} className={classes.link} key={icon}>
       <Chip
         className={classes.chip}
         icon={

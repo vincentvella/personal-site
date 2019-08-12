@@ -9,11 +9,20 @@ const DevelopmentCard = ({ title, image, proficiencyLevel }) => {
   const img = get(image, 'childImageSharp.fluid', null);
   let stars = [];
   for (let i = 0; i < parseInt(proficiencyLevel); i++) {
-    stars.push(<FontAwesomeIcon icon={faStar} color="gold" />);
+    stars.push(<FontAwesomeIcon key={i} icon={faStar} color="gold" />);
   }
 
   return (
-    <Grid item xs={4} sm={3} md={4} lg={3} xl={2} style={{ padding: 5 }}>
+    <Grid
+      key={title}
+      item
+      xs={4}
+      sm={3}
+      md={4}
+      lg={3}
+      xl={2}
+      style={{ padding: 5 }}
+    >
       <Card>
         <Grid container>
           <Hidden mdUp>

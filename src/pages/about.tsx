@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import get from 'lodash.get';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
@@ -31,7 +31,7 @@ const About = props => {
           const { coverPhoto, title, message } = area;
           const image = get(coverPhoto, 'childImageSharp.fluid', null);
           return (
-            <>
+            <Fragment key={title}>
               <Container maxWidth={false} className={classes.header}>
                 <Img fluid={image} style={{ zIndex: 0 }} />
               </Container>
@@ -55,7 +55,7 @@ const About = props => {
                   </Grid>
                 </Grid>
               </Grid>
-            </>
+            </Fragment>
           );
         })}
       </Container>

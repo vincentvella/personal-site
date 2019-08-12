@@ -28,7 +28,7 @@ const Press = props => {
         {pressItems.map(({ link, image, occurrence, title }) => {
           const img = get(image, 'childImageSharp.fluid', null);
           return (
-            <Card style={{ margin: 10 }}>
+            <Card style={{ margin: 10 }} key={title}>
               <Grid container>
                 <Grid item xs={12}>
                   <a

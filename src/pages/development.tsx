@@ -70,7 +70,7 @@ const Development = props => {
             {stacks.map(stack => {
               const { title, developmentNodes } = stack;
               return (
-                <Grid item xs={12}>
+                <Grid item xs={12} key={title}>
                   <Typography variant="h6" color="textSecondary">
                     {title}
                   </Typography>
@@ -88,7 +88,7 @@ const Development = props => {
           <ClickAwayListener onClickAway={() => setOpen(false)}>
             <CardContent>
               {tooltipHeaders.map(header => (
-                <Button onClick={handleClick('top', header)}>
+                <Button key={header} onClick={handleClick('top', header)}>
                   <FontAwesomeIcon icon={faStar} color="gold" />
                 </Button>
               ))}

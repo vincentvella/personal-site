@@ -14,10 +14,14 @@ interface DrawerProps {
   drawerProps: any;
 }
 
-const createDrawerItem = ({ node }) => {
+const DrawerItem = ({ node }) => {
   const { title, path } = node;
   return (
-    <Link to={path} style={{ textDecoration: 'none', color: 'black' }}>
+    <Link
+      key={title}
+      to={path}
+      style={{ textDecoration: 'none', color: 'black' }}
+    >
       <ListItem button key={title}>
         <ListItemIcon>
           <AppIcon icon={title} />
@@ -37,7 +41,7 @@ const Drawer: React.FC<DrawerProps> = props => {
     <div>
       <div {...toolbarStyles} />
       <Divider />
-      <List>{drawerProps.map(createDrawerItem)}</List>
+      <List>{drawerProps.map(DrawerItem)}</List>
     </div>
   );
 };
