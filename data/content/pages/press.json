@@ -4,5 +4,31 @@
   "path": "/press",
   "body": "Hey all this is me",
   "coverImage": "../../assets/areas/press/newspapers.jpg",
-  "type": "content"
+  "type": "content",
+  "pressItems": [
+    {
+      "image": "../../assets/areas/press/news-psu-giving-back.jpeg",
+      "occurrence": "August 11, 2019",
+      "link": "https://news.psu.edu/story/545089/2018/10/31/arts-and-entertainment/giving-back-arts-community-through-pacalendar-app",
+      "title": "Giving back to arts community through PACalendar app"
+    },
+    {
+      "image": "../../assets/areas/press/psu-news.jpeg",
+      "occurrence": "May 9, 2018",
+      "link": "https://news.psu.edu/story/520682/2018/05/09/arts-and-entertainment/first-its-kind-app-centralizes-campus-arts-event",
+      "title": "First-of-its-kind app centralizes campus arts' event calendars"
+    },
+    {
+      "image": "../../assets/areas/press/onward-state.jpeg",
+      "occurrence": "May 7, 2018",
+      "link": "https://onwardstate.com/2018/05/07/pac-app-aims-connect-arts-community-events-shows/",
+      "title": "PAC App Aims To Connect Arts Community To Events And Shows"
+    },
+    {
+      "image": "../../assets/areas/press/driving-simulator-linkedin.png",
+      "occurrence": "November 11, 2017",
+      "link": "https://www.linkedin.com/posts/rmarredondo_many-thanks-to-susan-deanour-host-today-activity-6334876674357817344-MHEq/",
+      "title": "First publicized demo of the ARI Driving Simulator"
+    }
+  ]
 }
