@@ -3,6 +3,7 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { InputField, SubmitButton } from '../form';
 import { Grid } from '@material-ui/core';
+import axios from 'axios';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
@@ -11,23 +12,29 @@ const validationSchema = Yup.object().shape({
   message: Yup.string().required()
 });
 
+const handleSubmit = async (
+  values,
+  { setSubmitting, resetForm, setStatus }
+) => {
+  setSubmitting(true);
+  try {
+    await axios.post(
+      'https://us-central1-personal-site-d9f76.cloudfunctions.net/sendMail',
+      values
+    );
+    resetForm();
+    setStatus({ success: 'You did it!' });
+    setSubmitting(false);
+  } catch (serverError) {
+    setStatus({ serverError });
+    setSubmitting(false);
+  }
+};
+
 const ContactForm = () => (
   <Formik
     initialValues={{ email: '', message: '' }}
-    onSubmit={(values, { setSubmitting, resetForm, setStatus }) => {
-      setSubmitting(true);
-      try {
-        setTimeout(() => {
-          alert(JSON.stringify(values));
-          resetForm();
-          setStatus({ success: 'You did it!' });
-          setSubmitting(false);
-        }, 500);
-      } catch (serverError) {
-        setStatus({ serverError });
-        setSubmitting(false);
-      }
-    }}
+    onSubmit={handleSubmit}
     validationSchema={validationSchema}
     render={() => (
       <Form>
