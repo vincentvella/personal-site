@@ -30,6 +30,7 @@ const SEO = () => (
               <meta name="twitter:description" content={description} />
             )}
             {image && <meta name="twitter:image" content={image} />}
+            <meta property="og:type" content="website" />
           </Helmet>
         </>
       );
