@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { useTheme } from '@material-ui/core/styles';
 import useStyles from './default.styles';
 import CustomDrawer from '../../components/drawer';
+import SEO from '../../components/SEO';
 import { Link } from 'gatsby';
 
 const logo = require('../../../data/assets/logo/bottom-right-sloth.svg');
@@ -34,6 +35,7 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = (
   return (
     <div className={classes.root}>
       <CssBaseline />
+      <SEO />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <IconButton
