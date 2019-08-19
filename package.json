@@ -15,7 +15,7 @@
     "gatsby-image": "^2.2.4",
     "gatsby-plugin-manifest": "^2.2.5",
     "gatsby-plugin-material-ui": "^2.1.3",
-    "gatsby-plugin-react-helmet": "^3.1.0",
+    "gatsby-plugin-react-helmet": "^3.1.3",
     "gatsby-plugin-sharp": "^2.2.2",
     "gatsby-plugin-typescript": "^2.1.0",
     "gatsby-source-filesystem": "^2.1.2",
@@ -25,13 +25,13 @@
     "lodash.get": "^4.4.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
+    "react-helmet": "^6.0.0-beta",
     "react-pdf": "^4.1.0",
     "yup": "^0.27.0"
   },
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby bheluild",
     "serve": "gatsby serve"
   },
   "devDependencies": {
