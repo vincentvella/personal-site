@@ -27,6 +27,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^6.0.0-beta",
     "react-pdf": "^4.1.0",
+    "use-cooldown": "^1.0.7",
     "yup": "^0.27.0"
   },
   "scripts": {

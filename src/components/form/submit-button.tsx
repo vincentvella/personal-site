@@ -1,21 +1,10 @@
 import { Button, CircularProgress, Typography, Grid } from '@material-ui/core';
 import { connect } from 'formik';
-import React, { useState, useEffect } from 'react';
-
-function useCoolDown(): [boolean, (value: boolean) => void] {
-  const [cooledDown, setCooledDown] = useState<boolean>(true);
-  useEffect(() => {
-    let coolDownTimer;
-    if (!cooledDown) {
-      coolDownTimer = setTimeout(() => setCooledDown(true), 300000);
-    }
-    return () => clearTimeout(coolDownTimer);
-  }, [cooledDown]);
-  return [cooledDown, setCooledDown];
-}
+import React from 'react';
+import { useCooldown } from 'use-cooldown';
 
 const SubmitButton: React.FC<any> = ({ formik, children, ...props }) => {
-  const [cooledDown, setCooledDown] = useCoolDown();
+  const [cooledDown, setCooledDown] = useCooldown(300000);
   const { isValid, isSubmitting, handleSubmit } = formik;
   const handleClick = (...formikStuff) => {
     setCooledDown(false);
