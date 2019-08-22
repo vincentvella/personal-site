@@ -4,6 +4,7 @@ module.exports = {
     description:
       'As a growing web and mobile developer I intend to use this site as a way to showcase my creations and experience as well as assisting with the creative process of others throughout the field.',
     url: 'https://vincentvella.me',
+    siteUrl: 'https://vincentvella.me',
     image: 'pacalendar.jpg',
     twitterUsername: '@coding_all_day',
     githubUsername: '@vincentvella'
