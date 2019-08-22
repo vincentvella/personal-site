@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Chip } from '@material-ui/core';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { useTheme } from '@material-ui/styles';
 import useStyles from './social-media-chip.styles';
 
@@ -8,7 +9,7 @@ const SocialMediaChip = ({ title, icon, iconSet, badgeColor, link }) => {
   const theme = useTheme();
   const classes = useStyles(theme);
   return (
-    <a href={link} className={classes.link} key={icon}>
+    <OutboundLink href={link} className={classes.link} key={icon}>
       <Chip
         className={classes.chip}
         icon={
@@ -17,7 +18,7 @@ const SocialMediaChip = ({ title, icon, iconSet, badgeColor, link }) => {
         label={title}
         style={{ backgroundColor: badgeColor }}
       />
-    </a>
+    </OutboundLink>
   );
 };
 

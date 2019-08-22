@@ -16,9 +16,12 @@ interface DrawerProps {
 
 const DrawerItem = ({ node }) => {
   const { title, path } = node;
+  const onClick = () =>
+    window.gtag && window.gtag('Click Drawer Link', 'click', { title });
   return (
     <Link
       key={title}
+      onClick={onClick}
       to={path}
       style={{ textDecoration: 'none', color: 'black' }}
     >

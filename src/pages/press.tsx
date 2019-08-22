@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import get from 'lodash.get';
 import { graphql } from 'gatsby';
 import { DefaultLayout } from '../layouts';
@@ -13,6 +13,7 @@ import {
   Divider
 } from '@material-ui/core';
 import Img from 'gatsby-image';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
 const Press = props => {
   const contentScreens = get(props, 'data.allPagesJson.edges', []);
@@ -31,26 +32,26 @@ const Press = props => {
             <Card style={{ margin: 10 }} key={title}>
               <Grid container>
                 <Grid item xs={12}>
-                  <a
+                  <OutboundLink
                     href={link}
                     style={{ textDecoration: 'none', color: 'inherit' }}
                   >
                     <CardActionArea>
                       <CardHeader title={title} subheader={occurrence} />
                     </CardActionArea>
-                  </a>
+                  </OutboundLink>
                 </Grid>
                 <Grid item xs={12}>
                   <Img fluid={img} />
                 </Grid>
-                <a
+                <OutboundLink
                   href={link}
                   style={{ textDecoration: 'none', color: 'inherit' }}
                 >
                   <CardActions>
                     <Button>See Source</Button>
                   </CardActions>
-                </a>
+                </OutboundLink>
               </Grid>
               <Divider />
             </Card>
