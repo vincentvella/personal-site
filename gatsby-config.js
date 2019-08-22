@@ -9,6 +9,7 @@ module.exports = {
     githubUsername: '@vincentvella'
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -27,6 +28,14 @@ module.exports = {
         theme_color: `#000000`,
         display: `standalone`,
         icon: 'data/assets/logo/Bottom Right Sloth.png'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://vincentvella.me',
+        sitemap: 'https://vincentvella.me/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     },
     'gatsby-plugin-top-layout',
