@@ -35,7 +35,7 @@
   },
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby bheluild",
+    "build": "gatsby build",
     "serve": "gatsby serve"
   },
   "devDependencies": {
